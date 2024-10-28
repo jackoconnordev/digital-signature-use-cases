@@ -3,6 +3,8 @@ These keys were used only for applications running on localhost which were not e
 Do not use these to secure anything important. Never expose your secret keys for any production-like
 application._
 
+---
+
 Hashing, HMAC, Digital Signature
 
 Levels

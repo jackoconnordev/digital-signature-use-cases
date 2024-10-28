@@ -4,10 +4,22 @@
 THIS SERVER DO NOT INSTALL OUR CUSTOM CA ROOT CERTIFICATE TO DEMONSTRATE THAT OUR
 BROWSER WILL REJECT THE HTTPS CONNECTION.**
 
-Run these steps manually in order to create and run a local https enabled Nginx server.
+Run these steps manually in order to create and run your own local https enabled Nginx server.
 
 ## Create certs
 
+If you do not have the ability to install `openssl`, you can use the provided keys and certificates
+in `ca-certs` and `server-certs` folders and skip to the "Build Nginx Docker container" step.
+
+Only use these keys and certificates for demo applications running on your localhost.
+
+---
+
+If you have `openssl` installed, delete the `ca-certs` and `server-certs` folders and create
+your own keys and certificates.
+```sh
+rm -r ca-certs/ server-certs
+```
 Create private key for our own local Certificate Authority. I'm using password == "password".
 ```sh
 mkdir ca-certs
